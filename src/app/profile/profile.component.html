@@ -1,13 +1,28 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div *ngIf="profile">
 
-<div class ="jumbotron">
-    <div *ngIf = "profile">
-        <div class = "panel panel-default">
-            <div class = "panel-heading">
-                {{profile.name}}
+                    <ul>
+                        <li> Username:{{profile.login}}</li>
+                        <li>Bio: {{profile.bio}}</li>
+                        <li> Email Address: {{profile.email}}</li>
+                        <li>Followers: {{profile.followers}}</li>
+                        <li> Following:{{profile.following}}</li>
+                        <li>Date of account Creation: {{profile.created_at}}</li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div *ngIf="profile">
+                    <img src="{{profile.avatar_url}}" alt="profilePhoto">
+                </div>
             </div>
 
         </div>
-
     </div>
-
 </div>
