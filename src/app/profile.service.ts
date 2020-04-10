@@ -8,8 +8,8 @@ import 'rxjs/add/operator/map';
 export class ProfileService {
 
   private username:string;
-  private clientid:'';
-  private clientSecret:'';
+  private clientid:'860b7118b7d0d48d66c1';
+  private clientSecret:'6abeedb8a2254184c3469d3a64a782522ab611f8';
   
   constructor(private http: HttpClient) { 
     console.log("our service is running");
@@ -17,6 +17,8 @@ export class ProfileService {
   }
 
     getProfInfo(){
-      return this.http.get("")
+      return this.http.get("https://api.github.com/users/NderituMwanu" + "?client_id=" + this.clientid + "&client_secret="
+      + this.clientSecret)
+      .map(res => res); 
     }
 }
