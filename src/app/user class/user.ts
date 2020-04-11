@@ -3,7 +3,7 @@ export class User {
     repos: any;
     username: string;
     
-    constructor(){
+ constructor(){
      
-}
+    }
 }

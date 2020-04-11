@@ -10,8 +10,8 @@
             <div class="form-group">
                 
                 <label for="username">ENTER USERNAME</label>
-                <input type="text" required class="form-control" [(ngModel)]="username" name="username"
-                    (keyup)="findProfile()">
+                <input type="text" required class="form-control" [(ngModel)]="username" name="username"><br>
+                    <button (click)="findUserProfile()" class = "btn btn-outline-success">SUBMIT USERNAME</button>
 
             </div>
         </form>
