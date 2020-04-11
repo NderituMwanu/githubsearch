@@ -1,32 +1,60 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Quicksand:wght@500&display=swap');
+    </style>
+
 <div class="jumbotron">
+        <form class="usernameform">
+            <div class="form-group">
+                <label for="username">ENTER USERNAME</label>
+                <input type="text" required class="form-control" [(ngModel)]="username" name="username"
+                    (keyup)="findProfile()">
+
+            </div>
+        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-ls-6">
+                    <div *ngIf="profile">
+                        <ul>
+                            <li> Username:{{profile.login}}</li>
+                            <li>Bio: {{profile.bio}}</li>
+                            <li> Email Address: {{profile.email}}</li>
+                            <li>Followers: {{profile.followers}}</li>
+                            <li> Following:{{profile.following}}</li>
+                            <li>Date of account Creation: {{profile.created_at}}</li>
+                        </ul>
+                    </div> 
+                    <div>   
+                        <p *ngIf="profile">
+                            <a href="{{profile.html_url}}" class="btn btn-outline-success" target="_blank">VIEW GITHUB
+                                ACCOUNT</a>
+                        </p>
+                    <div>    
+                        <div class="col-ls-6">
+                            <div *ngIf="profile">
+                                <img src="{{profile.avatar_url}}" alt="profilePhoto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>        
+</div>
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <div *ngIf="profile">
-
-                    <ul>
-                        <li> Username:{{profile.login}}</li>
-                        <li>Bio: {{profile.bio}}</li>
-                        <li> Email Address: {{profile.email}}</li>
-                        <li>Followers: {{profile.followers}}</li>
-                        <li> Following:{{profile.following}}</li>
-                        <li>Date of account Creation: {{profile.created_at}}</li>
-                    </ul>
-                    
-                    <p>
-                        <a href = "{{profile.html_url}}" class = "btn btn-outline-success" target = "_blank">VIEW GITHUB REPO</a>
-                    </p>
-                
-
+            <div class="col-ls-6">
+                <div *ngFor="let repo of repos" >
+                   <p> {{repo.name}}:</p>
+                    <a href="{{repo.html_url}}" class="btn btn-warning" target="_blank"> VIEW REPOSITORY</a>
                 </div>
             </div>
-
-            <div class="col-sm-3">
-                <div *ngIf="profile">
-                    <img src="{{profile.avatar_url}}" alt="profilePhoto">
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
+
+
+    <footer><h6>GITHUB SEARCH APPLICATION 2020</h6></footer>
+
+
+
