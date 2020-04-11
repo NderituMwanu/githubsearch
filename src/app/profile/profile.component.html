@@ -2,9 +2,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Quicksand:wght@500&display=swap');
     </style>
 
+
+    <h2>GITHUB SEARCH APPLICATION</h2>
+    <img class = "logo" src="https://img.icons8.com/pastel-glyph/64/000000/monitor.png"/>
 <div class="jumbotron">
         <form class="usernameform">
             <div class="form-group">
+                
                 <label for="username">ENTER USERNAME</label>
                 <input type="text" required class="form-control" [(ngModel)]="username" name="username"
                     (keyup)="findProfile()">
@@ -39,15 +43,17 @@
                 </div>
             </div>
         </div>
-        </div>        
+        </div>  
+             
 </div>
 
     <div class="container">
         <div class="row">
             <div class="col-ls-6">
                 <div *ngFor="let repo of repos" >
-                   <p> {{repo.name}}:</p>
+                        <p>{{repo.name}}:</p>
                     <a href="{{repo.html_url}}" class="btn btn-warning" target="_blank"> VIEW REPOSITORY</a>
+                    
                 </div>
             </div>
         </div>
@@ -55,6 +61,7 @@
 
 
     <footer><h6>GITHUB SEARCH APPLICATION 2020</h6></footer>
+    
 
 
 

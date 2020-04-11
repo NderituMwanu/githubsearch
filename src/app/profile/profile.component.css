@@ -2,19 +2,30 @@
     margin-top  :5%;
 }
 
-
+.logo{
+    padding-left: 43%;
+}
 
 .btn btn-warning{
    align-items: center;
 }
 
 .jumbotron{
+    
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Quicksand', sans-serif;
 
 }
 
-footer{
+footer,h2{
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Quicksand', sans-serif;
 }
+
+h6{
+    text-align: center;
+    color: orange;
+    
+}
+
+
