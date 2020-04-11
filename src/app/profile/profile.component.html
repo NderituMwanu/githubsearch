@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-ls-6">
                 <div *ngFor="let repo of repos" >
-                        <p appCustom>{{repo.name}}:</p>
+                        <p appCustom>{{repo.name|uppercase}}:</p>
                     <a href="{{repo.html_url}}" class="btn btn-warning" target="_blank"> VIEW REPOSITORY</a>
                     
                 </div>
@@ -60,7 +60,7 @@
     </div>
 
 
-    <footer><h6>GITHUB SEARCH APPLICATION 2020</h6></footer>
+    <footer><h6>GITHUB SEARCH APPLICATION ©️ 2020 </h6></footer>
     
 
 

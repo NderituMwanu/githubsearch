@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { User } from './user class/user';
 import { Repository } from './repository class/repository';
 import { CustomDirective } from './custom.directive';
+import { UppercasePipe } from './uppercase.pipe';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CustomDirective } from './custom.directive';
     AboutgsComponent,
     NavbarComponent,
     CustomDirective,
+    UppercasePipe,
     
 
   ],
