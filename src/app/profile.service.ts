@@ -13,7 +13,7 @@ export class ProfileService {
 
   constructor(private http: HttpClient) {
     console.log("Service is on");
-    this.username = "";
+    this.username = "NderituMwanu";
   }
 
 
