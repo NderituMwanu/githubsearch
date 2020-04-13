@@ -25,7 +25,7 @@ Github Search is a web based application which enables the user to search for re
 
  6. Now you can see the profile of that particular user that you were searching for as well as all their details, including a list of sll their repos.
 
- 7. Link to live site: https://hardcore-cray-6fce94.netlify.com
+ 7. Link to live site: https://friendly-poincare-32489e.netlify.com
 
 Click on Profile search on the application and enter username on the form that appears. Click submit and you can now view the information belonging to that particular user, includeing their repositories.
 
